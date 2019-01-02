@@ -27,7 +27,7 @@ var _AceTM = (function (_j, _s, _b, _o, _y) {
 AceCounter+ 설치 스크립트 노출하기 :
 ```html
 <footer>
-    <script type="text/javascript" src="/공통.js"></script>
+    <script type="text/javascript" src="공통.js"></script>
 </footer>
 ```
 설치 스크립트는 다른 영역도 상관 없으나 가급적 `footer`영역에 노출 시키기를 권장드립니다.
