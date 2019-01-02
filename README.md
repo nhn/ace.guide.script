@@ -31,4 +31,10 @@ AceCounter+ 설치 스크립트 노출하기 :
     <script type="text/javascript" src="공통.js"></script>
 </footer>
 ```
-설치 스크립트는 다른 영역도 상관 없으나 가급적 `footer`영역에 노출 시키기를 권장드립니다.
+설치 스크립트는 다른 영역도 상관 없으나 가급적 `footer`영역에 노출 시키기를 권장드립니다.  <br></br>
+
+기능별 환경 변수 설정하기 :  
+환경 변수는 반드시 `설치 스크립트 상단`에 위치하도록 입력합니다.  
+아래 가이드를 참조해주세요.  
+
+* [환경변수 설정하기](https://github.com/nhnent/ace.guide.script/wiki/3.-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
