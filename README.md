@@ -25,6 +25,7 @@ var _AceTM = (function (_j, _s, _b, _o, _y) {
 `AceCounter Plus_Script_v9.txt`의 내용을 별도의 공통 파일로 생성해주세요.
 
 AceCounter+ 설치 스크립트 노출하기 :
+### Test.html
 ```html
 <footer>
     <script type="text/javascript" src="공통.js"></script>
