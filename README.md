@@ -6,7 +6,7 @@ AceCounter+ 분석 서비스를 사용하기 위한 설치 스크립트 입니�
 # 간편 시작하기
 AceCounter+를 가장 쉽게 이용하는 방법입니다.  
   
-`설치 스크립트` 다운로드 하기 :
+### 1단계 : `설치 스크립트` 다운로드 하기
 1. https://new.acecounter.com 접속
 2. 로그인
 3. 서비스 관리 클릭
@@ -14,7 +14,7 @@ AceCounter+를 가장 쉽게 이용하는 방법입니다.
 5. 서비스 목록 중 `Web Free`, `Web Trial`에서 다운로드 버튼 클릭
 6. 압축 해제 후 `AceCounter Plus_Script_v9.txt` 파일 열기  <br></br>
 
-`공통.js`파일 생성하기 (선택사항) :
+### 2단계 (선택사항) : `공통.js`파일 생성하기 
 ```javascript
 var _AceTM = (function (_j, _s, _b, _o, _y) {
     var _uf='undefined',_pmt='',_lt=location;var _ap = String(typeof(_y.appid) != _uf ? _y.appid():(isNaN(window.name))?0:window.name);var _ai=(_ap.length!=6)?(_j!=0?_j:0):_ap;if(typeof(_y.em)==_uf&&_ai!=0){var _sc=document.createElement('script');var _sm=document.getElementsByTagName('script')[0];
@@ -24,7 +24,7 @@ var _AceTM = (function (_j, _s, _b, _o, _y) {
 ```
 `AceCounter Plus_Script_v9.txt`의 내용을 별도의 공통 파일로 생성해주세요.  <br></br>
 
-AceCounter+ 설치 스크립트 노출하기 :  
+### 3단계 : AceCounter+ 설치 스크립트 노출하기
 ```html
 <footer>
     <script type="text/javascript" src="공통.js"></script>
@@ -32,7 +32,7 @@ AceCounter+ 설치 스크립트 노출하기 :
 ```
 설치 스크립트는 다른 영역도 상관 없으나 가급적 `footer`영역에 노출 시키기를 권장드립니다.  <br></br>
 
-# 환경 변수 설정하기
-환경변수 설정을 통하여 좀 더 상세한 분석을 이용해보세요.
+### 4단계 : 환경 변수 설정하기
+환경변수 설정을 통하여 상세한 기능을 이용해보세요.
 * [기능별 환경변수 설정하기](https://github.com/nhnent/ace.guide.script/wiki/3.-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
 * [상품 환경변수 설정하기](https://github.com/nhnent/ace.guide.script/wiki/4.-%EC%83%81%ED%92%88%EA%B4%80%EB%A0%A8-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
