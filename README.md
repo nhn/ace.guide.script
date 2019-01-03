@@ -25,7 +25,6 @@ var _AceTM = (function (_j, _s, _b, _o, _y) {
 `AceCounter Plus_Script_v9.txt`의 내용을 별도의 공통 파일로 생성해주세요.  <br></br>
 
 AceCounter+ 설치 스크립트 노출하기 :  
-**Test.html**
 ```html
 <footer>
     <script type="text/javascript" src="공통.js"></script>
@@ -33,8 +32,7 @@ AceCounter+ 설치 스크립트 노출하기 :
 ```
 설치 스크립트는 다른 영역도 상관 없으나 가급적 `footer`영역에 노출 시키기를 권장드립니다.  <br></br>
 
-# 기능별 환경 변수 설정하기
-환경 변수는 반드시 `설치 스크립트 상단`에 위치하도록 입력합니다.  
-아래 가이드를 참조해주세요.  
-
-* [환경변수 설정하기](https://github.com/nhnent/ace.guide.script/wiki/3.-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
+# 환경 변수 설정하기
+환경변수 설정을 통하여 좀 더 상세한 분석을 이용해보세요.
+* [기능별 환경변수 설정하기](https://github.com/nhnent/ace.guide.script/wiki/3.-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
+* [상품 환경변수 설정하기](https://github.com/nhnent/ace.guide.script/wiki/4.-%EC%83%81%ED%92%88%EA%B4%80%EB%A0%A8-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
