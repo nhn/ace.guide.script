@@ -15,6 +15,7 @@ AceCounter+를 가장 쉽게 이용하는 방법입니다.
 6. 압축 해제 후 `AceCounter Plus_Script_v9.txt` 파일 열기  <br></br>
 
 ### 2단계 (선택사항) : `공통.js`파일 생성하기 
+#### 공통.js
 ```javascript
 var _AceTM = (function (_j, _s, _b, _o, _y) {
     var _uf='undefined',_pmt='',_lt=location;var _ap = String(typeof(_y.appid) != _uf ? _y.appid():(isNaN(window.name))?0:window.name);var _ai=(_ap.length!=6)?(_j!=0?_j:0):_ap;if(typeof(_y.em)==_uf&&_ai!=0){var _sc=document.createElement('script');var _sm=document.getElementsByTagName('script')[0];
@@ -22,7 +23,7 @@ var _AceTM = (function (_j, _s, _b, _o, _y) {
     var _ct=String(_cn[_alx]).substring(0,128);_pmt+=(_alx+"="+encodeURIComponent((_ct!=_uf)?_ct:'')+"&");};_y.acid=_ai;_y.atid=_cn.tid;_y.em=_cn.rnd;_sc.src=((_lt.protocol.indexOf('http')==0?_lt.protocol:'http:')+'//'+_b+'/'+_o)+'?'+_pmt+'py=0';_sm.parentNode.insertBefore(_sc,_sm);};return _y;
 })(0,'0', 'atm.acecounter.com','ac.js',window._AceTM||{});
 ```
-`AceCounter Plus_Script_v9.txt`의 내용을 별도의 공통 파일로 생성해주세요.  <br></br>
+`AceCounter Plus_Script_v9.txt`의 내용을 별도의 공통 js 파일로 생성하시기를 권장합니다.  <br></br>
 
 ### 3단계 : AceCounter+ 설치 스크립트 노출하기
 ```html
