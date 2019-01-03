@@ -35,5 +35,6 @@ var _AceTM = (function (_j, _s, _b, _o, _y) {
 
 ### 4단계 : 환경 변수 설정하기
 환경변수 설정을 통하여 상세한 기능을 이용해보세요.
-* [기능별 환경변수 설정하기](https://github.com/nhnent/ace.guide.script/wiki/3.-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
-* [상품 환경변수 설정하기](https://github.com/nhnent/ace.guide.script/wiki/4.-%EC%83%81%ED%92%88%EA%B4%80%EB%A0%A8-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
+* [기능별 환경변수 설정 방법](https://github.com/nhnent/ace.guide.script/wiki/3.-%EA%B8%B0%EB%8A%A5%EB%B3%84-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
+* [상품 환경변수 설정 방법](https://github.com/nhnent/ace.guide.script/wiki/4.-%EC%83%81%ED%92%88-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
+
