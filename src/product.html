@@ -7,10 +7,23 @@
       location.href = "./main.html"
     }
 
-    function buy(){
+    function buyNow(){
+      _AceTM.BuyNow(5)
       location.href = "./productConfirm.html"
     }
 
+    function AddCart(){
+      _AceTM.AddCart(5)
+      alert("cart 페이지를 구현해주세요.")
+      //location.href = "./cart.html"
+    }
+
+    function WishList(){
+      _AceTM.WishList(5)
+      alert("해당 상품을 찜하였습니다.")
+    }
+
+    //[제품상세 페이지 설정]
     var _AceTM=(_AceTM||{})
     _AceTM.Product={
       pCode:'P001',  //제품아이디(필수)
@@ -29,7 +42,9 @@
   <img src="../res/img/P001.jpg"></img>
   <section>
     <p>가격 : 8,900 원</p>
-    <button onclick="buy()">바로구매</button><br>
+    <button onclick="buyNow()">바로구매</button>
+    <button onclick="AddCart()">장바구니 넣기</button>
+    <button onclick="WishList()">찜하기</button><br>
     <button onclick="moveToMain()">뒤로가기</button>
   </section>
 </body>

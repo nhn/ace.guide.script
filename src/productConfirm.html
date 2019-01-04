@@ -7,10 +7,11 @@
       location.href = "./main.html"
     }
 
+    //[구매 완료 페이지 설정]
     var _AceTM=(_AceTM||{})
     _AceTM.Buy={
       bOrderNo:'A000001', //주문번호(필수)
-      bTotalPrice:'5000', //주문 총가격(필수)
+      bTotalPrice:'44,500', //주문 총가격(필수)
       bPay:'무통장입금',  //지불방법(ex : 무통장,신용카드 ,~~~)
       bItem:[], // 주문리스트(필수)
       bDeliveryPrice:'2000' //배송비
@@ -19,7 +20,7 @@
     _AceTM.Buy.bItem.push({
       pCode:'P001',  //제품아이디
       pName:'쟌슨빌 소세지 396g',    //제품이름
-      pQuantity:1, //제품수량 or 옵션수량
+      pQuantity:5, //제품수량 or 옵션수량
       pPrice:'8900',   //판매가
       oCode:'',    //옵션아이디
       oName:''     //옵션이름
@@ -28,10 +29,10 @@
 </head>
 
 <body>
-  <h1>쟌슨빌 소세지 100g 구매가 완료되었습니다.</h1>
+  <h1>쟌슨빌 소세지 396g 구매가 완료되었습니다.</h1>
   <section>
-    <p>주문번호 : A000001</p>
-    <p>가격 : 5,000 원</p>
+    <p>주문번호 : O20190104161955</p>
+    <p>가격 : 44,500 원</p>
     <p>결제방법 : 무통장입금</p>
     <button onclick="moveToMain()">홈으로가기</button>
   </section>

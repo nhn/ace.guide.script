@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript">
+    function moveToMain(){
+      location.href = "./main.html"
+    }
+
+    function moveToProduct(){
+      location.href = "./product.html?pno=P001"
+    }
+
+
+    function getKeyword(query){
+      if(query.length > 0){
+        query = query.replace("?","");
+        var queryArray = query.split("&")
+
+        for(var idx in queryArray){
+          if(queryArray[idx].indexOf("search") > -1){
+            return queryArray[idx].substring(queryArray[idx].indexOf("=")+1, queryArray[idx].length)                     
+          }
+        }
+      }
+    }
+    
+    var query = location.search
+    var keyword = getKeyword(query)
+
+    if(keyword.length > 0){
+      var _AceTM=(_AceTM||{})
+      _AceTM.pSearch=keyword //사이트내부검색어
+      console.log("keyword : " + keyword)
+    }
+
+ </script>
+</head>
+
+<body>
+  <h1>검색 완료 : 1건</h1>
+  <section>
+    <ul>
+      <li>
+        <div>
+          쟌슨빌 소시지 <button onclick="moveToProduct()">상품 구매</button>
+        </div>
+      </li>
+    </ul>
+    <button onclick="moveToMain()">뒤로 가기</button>
+  </section>
+</body>
+
+<footer>
+  <script type="text/javascript" src="../common/acpScript.js"></script>
+</footer>
+
+</html>

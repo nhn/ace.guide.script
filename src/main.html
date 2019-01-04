@@ -8,8 +8,18 @@
       location.href = "../index.html"
     }
 
-    function moveToProduct(){
-      location.href = "./product.html?pno=P001"
+    function search(){      
+      var keyword = document.getElementById("keyword").value
+
+      if(keyword != undefined && keyword.length > 0){
+        location.href = "./search.html?search=" + keyword
+      } else {
+        alert("검색어를 입력해주세요.")
+      }
+    }
+
+    function deactivate(){
+      alert("구현필요")
     }
   </script>
 </head>
@@ -18,8 +28,9 @@
   <h1>메인 페이지</h1>
   <section>
     <h4 id="welcome_message"></h4>
-    <button onclick="moveToProduct()">상품 구매</button>
+    <p><input type="text" id="keyword" value="소시지"/><button onclick="search()">상품검색</button></p>
     <button onclick="logout()">로그아웃</button>
+    <button onclick="deactivate()">탈퇴</button>
   </section>
 </body>
 
