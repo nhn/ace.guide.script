@@ -8,16 +8,16 @@
     }
 
     function buy(){
-      location.href = "./productConfirm.html?name=쟌슨빌 소세지 100g&price=5000"
+      location.href = "./productConfirm.html"
     }
 
     var _AceTM=(_AceTM||{})
     _AceTM.Product={
       pCode:'P001',  //제품아이디(필수)
-      pName:'쟌슨빌 소세지 100g',  //제품이름(필수)
-      pPrice:'5000',  //판매가(필수)
+      pName:'쟌슨빌 소시지 396g',  //제품이름(필수)
+      pPrice:'8900',  //판매가(필수)
       pCategory:'식품', //제품 카테고리명(선택)
-      pImageURl:'http://test.jpg',//제품이미지url 주소(필수)
+      pImageURl:'http://localhost/res/img/P001.jpg',//제품이미지url 주소(필수)
       pLink:'http://localhost/product.html?pno=P001',//제품상세페이지 주소(필수)
       oItem:[]
     }
@@ -25,10 +25,11 @@
 </head>
 
 <body>
-  <h1>쟌슨빌 소세지 100g</h1>
+  <h1>쟌슨빌 소시지 396g</h1>
+  <img src="../res/img/P001.jpg"></img>
   <section>
-    <p>가격 : 5,000 원</p>
-    <button onclick="buy()">구매</button><br>
+    <p>가격 : 8,900 원</p>
+    <button onclick="buy()">바로구매</button><br>
     <button onclick="moveToMain()">뒤로가기</button>
   </section>
 </body>
