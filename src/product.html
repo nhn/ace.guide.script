@@ -10,6 +10,17 @@
     function buy(){
       location.href = "./productConfirm.html?name=쟌슨빌 소세지 100g&price=5000"
     }
+
+    var _AceTM=(_AceTM||{})
+    _AceTM.Product={
+      pCode:'P001',  //제품아이디(필수)
+      pName:'쟌슨빌 소세지 100g',  //제품이름(필수)
+      pPrice:'5000',  //판매가(필수)
+      pCategory:'식품', //제품 카테고리명(선택)
+      pImageURl:'http://test.jpg',//제품이미지url 주소(필수)
+      pLink:'http://localhost/product.html?pno=P001',//제품상세페이지 주소(필수)
+      oItem:[]
+    }
   </script>
 </head>
 
