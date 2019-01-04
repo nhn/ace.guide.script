@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript">
+    function logout(){
+      localStorage.setItem("_userid", "")
+      location.href = "../index.html"
+    }
+
+    function moveToProduct(){
+      location.href = "./product.html"
+    }
+  </script>
+</head>
+
+<body>
+  <h1>메인 페이지</h1>
+  <section>
+    <h4 id="welcome_message"></h4>
+    <button onclick="moveToProduct()">상품 구매</button>
+    <button onclick="logout()">로그아웃</button>
+  </section>
+</body>
+
+<footer>
+  <script type="text/javascript" src="../common/acpScript.js"></script>
+
+  <script type="text/javascript">    
+    var id = localStorage.getItem("_userid")
+    if(id != undefined && id.length > 0){
+      var wellcomeMsg = document.getElementById("welcome_message")
+      wellcomeMsg.innerText = id + "님 환영합니다."
+    } else {
+      alert("로그인 아이디가 만료되었습니다.")
+      localStorage.setItem("_userid", "")
+      location.href = "../index.html"
+    }
+  </script>
+</footer>
+
+</html>

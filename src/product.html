@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript">
+    function moveToMain(){
+      location.href = "./main.html"
+    }
+
+    function buy(){
+      location.href = "./productConfirm.html?name=쟌슨빌 소세지 100g&price=5000"
+    }
+  </script>
+</head>
+
+<body>
+  <h1>쟌슨빌 소세지 100g</h1>
+  <section>
+    <p>가격 : 5,000 원</p>
+    <button onclick="buy()">구매</button><br>
+    <button onclick="moveToMain()">뒤로가기</button>
+  </section>
+</body>
+
+<footer>
+  <script type="text/javascript" src="../common/acpScript.js"></script>
+</footer>
+
+</html>

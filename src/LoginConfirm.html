@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function moveToMain(){
+      location = "./main.html"
+    }
+
+    function getUserId(query){
+      if(query.length > 0){
+        query = query.replace("?","");
+        var queryArray = query.split("&")
+
+        for(var idx in queryArray){
+          if(queryArray[idx].indexOf("id") > -1){
+            return queryArray[idx].substring(queryArray[idx].indexOf("=")+1, queryArray[idx].length)                     
+          }
+        }
+      }
+    }
+    
+    var query = location.search
+    var userId = getUserId(query)
+
+    if(userId.length > 0) {
+      var _AceTM=(_AceTM||{})
+      _AceTM.Login={
+        uID:userId, // 로그인사용자 고유값
+        uAge:0,     // 로그인사용자 나이
+        uGender:'', // 로그인사용자 성별(man | woman)
+        uGroup1:'', // 사용자 정의변수 1 ( 1 ~ 10 정수값)
+        uGroup2:'', // 사용자 정의변수 2 ( 1 ~ 10 정수값)
+        uGroup3:''  // 사용자 정의변수 3 ( 1 ~ 10 정수값)
+      }
+
+      localStorage.setItem("_userid", userId)
+    }
+  </script>
+</head>
+
+<body>
+  <section>
+    <h2>로그인 완료</h2>
+    <button onclick="moveToMain()">홈으로 가기</button>
+  </section>
+</body>
+
+<footer>
+  <script type="text/javascript" src="../common/acpScript.js"></script>
+</footer>
+
+</html>
