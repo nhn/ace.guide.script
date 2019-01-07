@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function moveToMain(){
+      location.href = "./main.html"
+    }
+
+    function order() {
+      if (confirm("클릭하면 결제완료 페이지로 이동합니다.(결제 과정은 생략)")) {
+        location.href="./orderConfirm.html";
+      }
+    }
+
+    <!--AceCounter-Plus eCommerce Buy Start -->
+    var _AceTM=(_AceTM||{});
+    _AceTM.Buy={
+    	bOrderNo:'20190110123456', //주문번호(필수)
+    	bTotalPrice:'26400', //주문 총가격(필수)
+    	bPay:'무통장',  //지불방법(ex : 무통장,신용카드 ,~~~)
+    	bItem:[], // 주문리스트(필수)
+    	bDeliveryPrice:'' //배송비
+    };
+    <!--AceCounter-Plus eCommerce Buy End -->
+
+  </script>
+</head>
+
+<body>
+  <section>
+    <h2>주문 완료</h2>
+    <p><b>* 주문일자</b> | 2019.01.10</p>
+    <p><b>* 주문번호</b> | 20190110123456</p>
+    <p><b>* 결제방법</b> | 무통장입금</p>
+
+    <h4>* 상품정보</h4>
+    <table width=100% border=1 style="border-collapse:collapse;font-size:0.8em;">
+      <colgroup>
+        <col width="15%">
+        <col width="10%">
+        <col width="*">
+        <col width="10%">
+        <col width="10%">
+        <col width="10%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>상품코드</th>
+          <th colspan=2>상품정보</th>
+          <th>수량</th>
+          <th>판매가</th>
+          <th>주문금액</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!--AceCounter-Plus eCommerce Buy item Start -->
+          <script language='javascript'>
+          _AceTM.Buy.bItem.push({
+          	pCode:'P000001',	//제품아이디
+          	pName:'쟌슨빌 소시지 396g',  	//제품이름
+          	pQuantity:1, 			//제품수량 or 옵션수량
+          	pPrice:'8900', 	 	//판매가
+          	oCode:'',    			//옵션아이디
+          	oName:''   				//옵션이름
+          });
+          </script>
+          <!--AceCounter-Plus eCommerce Buy item End -->
+          <td>P000001</td>
+          <td><img src="../res/img/P001.jpg" width=100></img></td>
+          <td><span>쟌슨빌 소시지 396g</h1></td>
+          <td>1</td>
+          <td>8,900원</td>
+          <td>8,900원</td>
+        </tr>
+        <tr>
+          <!--AceCounter-Plus eCommerce Buy item Start -->
+          <script language='javascript'>
+          _AceTM.Buy.bItem.push({
+          	pCode:'P000002',	//제품아이디
+          	pName:'추억의 달고나 20g',  	//제품이름
+          	pQuantity:10, 			//제품수량 or 옵션수량
+          	pPrice:'1500', 	 	//판매가
+          	oCode:'',    			//옵션아이디
+          	oName:''   				//옵션이름
+          });
+          </script>
+          <!--AceCounter-Plus eCommerce Buy item End -->
+          <td>P000002</td>
+          <td><img src="../res/img/P002.jpg" width=100></img></td>
+          <td><span>추억의 달고나 20g</h1></td>
+          <td>10</td>
+          <td>1,500원</td>
+          <td>15,000원</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>* 금액정보</h4>
+    <table style="border-collapse:collapse;font-size:0.8em;">
+      <colgroup>
+        <col width="60%">
+        <col width="*">
+      </colgroup>
+      <tbod>
+        <tr>
+          <td>
+            총 상품금액 <span style="float:right"><b>23,900</b>원</span><br/>
+            배송비 <span style="float:right"><b>2,500</b>원</span>
+          </td>
+        </tr>
+        <tr style='border-top:2px'>
+          <td>
+            <hr/>
+            <b>결제금액</b> <span style="float:right"><b>26,400</b>원</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <br/>
+  <button onclick="moveToMain()">홈으로 가기</button>
+</body>
+
+<footer>
+  <script type="text/javascript" src="../common/acpScript.js"></script>
+</footer>
+
+</html>

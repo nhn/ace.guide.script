@@ -8,7 +8,7 @@
       location.href = "../index.html"
     }
 
-    function search(){      
+    function search(){
       var keyword = document.getElementById("keyword").value
 
       if(keyword != undefined && keyword.length > 0){
@@ -19,15 +19,20 @@
     }
 
     function deactivate(){
-      alert("구현필요")
+      location.href = "./withdraw.html"
+    }
+
+    function goCart() {
+      location.href = "./cart.html"
     }
   </script>
 </head>
 
 <body>
-  <h1>메인 페이지</h1>
+  <h1>Home</h1>
   <section>
     <h4 id="welcome_message"></h4>
+    <button onclick="goCart()">장바구니</button>
     <p><input type="text" id="keyword" value="소시지"/><button onclick="search()">상품검색</button></p>
     <button onclick="logout()">로그아웃</button>
     <button onclick="deactivate()">탈퇴</button>
@@ -37,7 +42,7 @@
 <footer>
   <script type="text/javascript" src="../common/acpScript.js"></script>
 
-  <script type="text/javascript">    
+  <script type="text/javascript">
     var id = localStorage.getItem("_userid")
     if(id != undefined && id.length > 0){
       var wellcomeMsg = document.getElementById("welcome_message")

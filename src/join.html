@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function moveToIndex(){
+      location.href = "../index.html"
+    }
+
+    function joinConfirm() {
+      var id     = document.getElementById("userid").value
+      var pwd    = document.getElementById("pwd").value
+      var pwdChk = document.getElementById("pwdChk").value
+      var gender = document.querySelector("input[name='gender']:checked").value
+
+      if(id.length <= 0){
+        alert("아이디를 입력해주세요.")
+        return;
+      }
+      else if(pwd.length <=0){
+        alert("패스워드를 입력해주세요.")
+        return;
+      }
+      else if(pwd!=pwdChk){
+        alert("패스워드가 일치하지 않습니다.")
+        return;
+      }
+
+      location.href = "./joinComplete.html?id=" + id + "&pwd=" + pwd + "&gender=" + gender
+    }
+  </script>
+</head>
+
+<body>
+  <section>
+    <h2>회원가입</h2>
+    <p>아이디 : <input id="userid" type="text" value="tester1" /></p>
+    <p>패스워드 : <input id="pwd" type="password" value="1234" /></p>
+    <p>패스워드 확인 : <input id="pwdChk" type="password" value="1234" /></p>
+    <p>
+      성별 :
+      <input type="radio" name="gender" id="man" value="man" checked> <label for="man">남성</label>
+      <input type="radio" name="gender" id="woman" value="woman"> <label for="woman">여성</label>
+    </p>
+
+    <button onclick="moveToIndex()">이전</button>
+    <button type="submit" onclick="joinConfirm()">완료</button>
+  </section>
+
+</body>
+
+<footer>
+<script type="text/javascript" src="../common/acpScript.js"></script>
+</footer>
+
+</html>

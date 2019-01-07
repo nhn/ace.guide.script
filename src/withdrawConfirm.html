@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function moveToIndex(){
+      location.href = "../index.html"
+    }
+  </script>
+</head>
+
+<body>
+  <section>
+    <h2>회원탈퇴 완료</h2>
+    <p>
+      <span id='userid'></span>님 탈퇴되었습니다.<br/>그동안 이용해주셔서 감사합니다.<br/><br/>
+      <button onclick="moveToIndex()">홈으로가기</button>
+  </section>
+
+</body>
+
+<footer>
+<script type="text/javascript" src="../common/acpScript.js"></script>
+<script type="text/javascript">
+  var id = localStorage.getItem("_userid")
+  if(id != undefined && id.length > 0){
+    document.querySelector("span").innerText=id
+    localStorage.removeItem("_userid");
+  }
+</script>
+</footer>
+
+</html>

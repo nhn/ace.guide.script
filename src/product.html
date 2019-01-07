@@ -14,13 +14,26 @@
 
     function AddCart(){
       _AceTM.AddCart(5)
-      alert("cart 페이지를 구현해주세요.")
-      //location.href = "./cart.html"
+      location.href = "./cart.html"
     }
 
     function WishList(){
       _AceTM.WishList(5)
       alert("해당 상품을 찜하였습니다.")
+    }
+
+    function sns(){
+      _AceTM.SNS('페이스북')
+    }
+
+    function review(){
+      var title = document.getElementById('title').value
+      var rating = document.getElementById('rating').value
+      if(title=='') {
+        alert('후기 제목을 입력하세요.');
+        return;
+      }
+      _AceTM.ReView('P001', title, rating)
     }
 
     //[제품상세 페이지 설정]
@@ -38,14 +51,65 @@
 </head>
 
 <body>
-  <h1>쟌슨빌 소시지 396g</h1>
-  <img src="../res/img/P001.jpg"></img>
+  <button onclick="moveToMain()">홈으로가기</button>
+  <h2>상품 상세</h2>
+
+
   <section>
-    <p>가격 : 8,900 원</p>
+    <h3>* 상품정보</h3>
+    <table border=1 style="border-collapse:collapse;">
+      <tr>
+        <th><h4>쟌슨빌 소시지 396g</h4></th>
+      </tr>
+      <tr>
+        <th><img src="../res/img/P001.jpg" width=300></img></th>
+      </tr>
+      <tr>
+        <th><h4>가격 : 8,900 원</h4></th>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <br/>
     <button onclick="buyNow()">바로구매</button>
     <button onclick="AddCart()">장바구니 넣기</button>
-    <button onclick="WishList()">찜하기</button><br>
-    <button onclick="moveToMain()">뒤로가기</button>
+    <button onclick="WishList()">찜하기</button>
+    <a href="#" onclick="sns()"><img src="../res/img/facebook.png" width="22px" alt="facebook" /></a>
+  </section>
+
+
+  <section>
+    <h3>* 상품후기</h3>
+    <div>
+
+      <span><b>제목</b></span>
+      <input type="text" id="title" name="title" style="width:300px;"/>
+
+    </div>
+    <div>
+
+      <span><b>평점</b></span>
+      <select id="rating" name="rating" style="width:150px;">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+
+    </div>
+    <div>
+
+      <span><b>내용</b></span>
+      <textarea id="content" false name="content" style="width:300px;" rows="2"></textarea>
+
+    </div>
+    <div>
+
+      <button onclick="review()">후기작성하기</button>
+
+    </div>
   </section>
 </body>
 

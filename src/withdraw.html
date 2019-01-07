@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function moveToIndex() {
+      location.href = "../index.html"
+    }
+    function withdrawConfirm() {
+      if(confirm('탈퇴하시겠습니까?')) {
+        location.href = "./withdrawConfirm.html"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <section>
+    <button onclick="moveToIndex()">홈으로가기</button>
+    <h2>회원탈퇴</h2>
+    <p>
+    <label for="withdraw">탈퇴사유</label><br/>
+    <textarea id="withdraw" name="withdraw" rows="5" cols="33">미사용 아이디로 탈퇴 요청합니다.
+    </textarea>
+    </p>
+    <button type="submit" onclick="withdrawConfirm()">탈퇴하기</button>
+  </section>
+
+</body>
+
+<footer>
+<script type="text/javascript" src="../common/acpScript.js"></script>
+</footer>
+
+</html>

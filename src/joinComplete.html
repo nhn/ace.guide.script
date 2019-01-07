@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function moveToMain(){
+      location = "./main.html"
+    }
+
+    function getUserId(query){
+      if(query.length > 0){
+        query = query.replace("?","");
+        var queryArray = query.split("&")
+
+        for(var idx in queryArray){
+          if(queryArray[idx].indexOf("id") > -1){
+            return queryArray[idx].substring(queryArray[idx].indexOf("=")+1, queryArray[idx].length)
+          }
+        }
+      }
+    }
+
+    var query = location.search
+    var userId = getUserId(query)
+
+    if(userId.length > 0) {
+      var _AceTM=(_AceTM||{})
+    	_AceTM.uJoin=userId // 회원가입 고유 값
+    	_AceTM.uWorth=0 // 회원가입 가치(선택)
+      localStorage.setItem("_userid", userId)
+    }
+  </script>
+</head>
+
+<body>
+  <section>
+    <h2>회원가입 완료</h2>
+    <span id='userid'>tester1</span>님 회원가입이 완료되었습니다.<br/>진심으로 환영합니다.<br/><br/>
+    <button onclick="moveToMain()">홈으로가기</button>
+  </section>
+</body>
+
+<footer>
+  <script type="text/javascript" src="../common/acpScript.js"></script>
+  <script type="text/javascript">
+    var id = localStorage.getItem("_userid")
+    if(id != undefined && id.length > 0){
+      document.querySelector("span").innerText=id
+    }
+  </script>
+</footer>
+
+</html>

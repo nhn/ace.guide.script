@@ -19,12 +19,12 @@
 
         for(var idx in queryArray){
           if(queryArray[idx].indexOf("search") > -1){
-            return queryArray[idx].substring(queryArray[idx].indexOf("=")+1, queryArray[idx].length)                     
+            return queryArray[idx].substring(queryArray[idx].indexOf("=")+1, queryArray[idx].length)
           }
         }
       }
     }
-    
+
     var query = location.search
     var keyword = getKeyword(query)
 
@@ -38,7 +38,8 @@
 </head>
 
 <body>
-  <h1>검색 완료 : 1건</h1>
+  <button onclick="moveToMain()">홈으로가기</button>
+  <h2>검색 완료 : 1건</h2>
   <section>
     <ul>
       <li>
@@ -47,7 +48,6 @@
         </div>
       </li>
     </ul>
-    <button onclick="moveToMain()">뒤로 가기</button>
   </section>
 </body>
 
