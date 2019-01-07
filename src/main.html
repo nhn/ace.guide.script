@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <script type="text/javascript">
+    function goCart() {
+      location.href = "./cart.html"
+    }
+
     function logout(){
       localStorage.setItem("_userid", "")
       location.href = "../index.html"
@@ -18,25 +21,45 @@
       }
     }
 
-    function deactivate(){
-      location.href = "./withdraw.html"
+    function bannerClick() {
+      _AceTM.oBannerClick('1', '1');
     }
 
-    function goCart() {
-      location.href = "./cart.html"
+    function goWithDraw(){
+      location.href = "./withdraw.html"
     }
   </script>
 </head>
 
 <body>
   <h1>Home</h1>
-  <section>
-    <h4 id="welcome_message"></h4>
-    <button onclick="goCart()">장바구니</button>
-    <p><input type="text" id="keyword" value="소시지"/><button onclick="search()">상품검색</button></p>
-    <button onclick="logout()">로그아웃</button>
-    <button onclick="deactivate()">탈퇴</button>
-  </section>
+
+  <p style='width:300px;'>
+      <span id="welcome_message" ></span>
+      <span style='float:right;'>
+        <button onclick="goCart()">장바구니</button>
+        <button onclick="logout()">로그아웃</button>
+      </span>
+
+  </p>
+  <p style='width:300px;'>
+
+      <span style='clear:both;float:right;'><input type="text" id="keyword" value="소시지" /><button onclick="search()">상품검색</button></span>
+
+  </p>
+  <p style='width:300px;'>
+
+    <a href="https://github.com/nhnent/ace.guide.script/wiki" onmousedown="bannerClick();" target="_blank">
+      <img src="../res/img/banner.png"/>
+    </a>
+
+  </p>
+  <p style='width:300px;'>
+
+    <button onclick="goWithDraw()" style='float:right;'>회원탈퇴</button>
+
+  </p>
+
 </body>
 
 <footer>
