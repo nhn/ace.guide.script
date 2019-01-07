@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
   <script type="text/javascript">
     function goCart() {
       location.href = "./cart.html"
@@ -32,33 +33,29 @@
 </head>
 
 <body>
+
   <h1>Home</h1>
 
-  <p style='width:300px;'>
+  <section>
       <span id="welcome_message" ></span>
-      <span style='float:right;'>
+      <span class="right">
         <button onclick="goCart()">장바구니</button>
         <button onclick="logout()">로그아웃</button>
+        <button onclick="goWithDraw()">회원탈퇴</button>
       </span>
+  </section>
 
-  </p>
-  <p style='width:300px;'>
+  <section>
+      <p class="right">
+        <input type="text" id="keyword" value="소시지" /><button onclick="search()">상품검색</button>
+      </p>
+  </section>
 
-      <span style='clear:both;float:right;'><input type="text" id="keyword" value="소시지" /><button onclick="search()">상품검색</button></span>
-
-  </p>
-  <p style='width:300px;'>
-
+  <aside>
     <a href="https://github.com/nhnent/ace.guide.script/wiki" onmousedown="bannerClick();" target="_blank">
-      <img src="../res/img/banner.png"/>
+      <img src="../res/img/banner.png" class="full_size"/>
     </a>
-
-  </p>
-  <p style='width:300px;'>
-
-    <button onclick="goWithDraw()" style='float:right;'>회원탈퇴</button>
-
-  </p>
+  </aside>
 
 </body>
 
