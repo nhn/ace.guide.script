@@ -3,8 +3,8 @@
 
 <head>
   <script>
-    function moveToMain(){
-      location.href = "./main.html"
+    function moveToMain() {
+      location.href = "../index.html"
     }
 
     function order() {
@@ -13,7 +13,7 @@
       }
     }
 
-    <!--AceCounter-Plus eCommerce Buy Start -->
+    // [AceCounter-Plus 구매완료-주문정보 설정)]
     var _AceTM=(_AceTM||{});
     _AceTM.Buy={
     	bOrderNo:'20190110123456', //주문번호(필수)
@@ -22,14 +22,14 @@
     	bItem:[], // 주문리스트(필수)
     	bDeliveryPrice:'' //배송비
     };
-    <!--AceCounter-Plus eCommerce Buy End -->
 
   </script>
 </head>
 
 <body>
+  <h2>구매완료(복수상품)</h2>
+
   <section>
-    <h2>주문 완료</h2>
     <p><b>* 주문일자</b> | 2019.01.10</p>
     <p><b>* 주문번호</b> | 20190110123456</p>
     <p><b>* 결제방법</b> | 무통장입금</p>
@@ -55,8 +55,8 @@
       </thead>
       <tbody>
         <tr>
-          <!--AceCounter-Plus eCommerce Buy item Start -->
-          <script language='javascript'>
+          <!-- [AceCounter-Plus 구매완료-제품상세 시작)] -->
+          <script language="javascript">
           _AceTM.Buy.bItem.push({
           	pCode:'P000001',	//제품아이디
           	pName:'쟌슨빌 소시지 396g',  	//제품이름
@@ -66,7 +66,7 @@
           	oName:''   				//옵션이름
           });
           </script>
-          <!--AceCounter-Plus eCommerce Buy item End -->
+          <!-- [AceCounter-Plus 구매완료-제품상세 끝] -->
           <td>P000001</td>
           <td><img src="../res/img/P001.jpg" width=100></img></td>
           <td><span>쟌슨빌 소시지 396g</h1></td>
@@ -75,8 +75,8 @@
           <td>8,900원</td>
         </tr>
         <tr>
-          <!--AceCounter-Plus eCommerce Buy item Start -->
-          <script language='javascript'>
+          <!-- [AceCounter-Plus 구매완료-제품상세 시작] -->
+          <script language="javascript">
           _AceTM.Buy.bItem.push({
           	pCode:'P000002',	//제품아이디
           	pName:'추억의 달고나 20g',  	//제품이름
@@ -86,7 +86,7 @@
           	oName:''   				//옵션이름
           });
           </script>
-          <!--AceCounter-Plus eCommerce Buy item End -->
+          <!-- [AceCounter-Plus 구매완료-제품상세 끝] -->
           <td>P000002</td>
           <td><img src="../res/img/P002.jpg" width=100></img></td>
           <td><span>추억의 달고나 20g</h1></td>
@@ -110,7 +110,7 @@
             배송비 <span style="float:right"><b>2,500</b>원</span>
           </td>
         </tr>
-        <tr style='border-top:2px'>
+        <tr style="border-top:2px">
           <td>
             <hr/>
             <b>결제금액</b> <span style="float:right"><b>26,400</b>원</span>
@@ -124,7 +124,9 @@
 </body>
 
 <footer>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
   <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
 </footer>
 
 </html>

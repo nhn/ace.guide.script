@@ -3,11 +3,11 @@
 
 <head>
   <script>
-    function moveToMain(){
-      location = "./main.html"
+    function moveToMain() {
+      location = "../index.html"
     }
 
-    function getUserId(query){
+    function getUserId(query) {
       if(query.length > 0){
         query = query.replace("?","");
         var queryArray = query.split("&")
@@ -24,24 +24,31 @@
     var userId = getUserId(query)
 
     if(userId.length > 0) {
+
+      // [Acecounter-Plus 회원가입 설정]
       var _AceTM=(_AceTM||{})
     	_AceTM.uJoin=userId // 회원가입 고유 값
     	_AceTM.uWorth=0 // 회원가입 가치(선택)
+
       localStorage.setItem("_userid", userId)
     }
   </script>
 </head>
 
 <body>
+  <h2>회원가입 완료</h2>
+
   <section>
-    <h2>회원가입 완료</h2>
-    <span id='userid'>tester1</span>님 회원가입이 완료되었습니다.<br/>진심으로 환영합니다.<br/><br/>
+    <span id="userid">tester1</span>님 회원가입이 완료되었습니다.<br/>진심으로 환영합니다.<br/><br/>
     <button onclick="moveToMain()">홈으로가기</button>
   </section>
 </body>
 
 <footer>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
   <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
+
   <script type="text/javascript">
     var id = localStorage.getItem("_userid")
     if(id != undefined && id.length > 0){

@@ -1,11 +1,9 @@
-section, aside {
-  width: 400px; 
+nav, section, aside {
+  width: 400px;
   padding: 5px;
 }
 
-.right {
-  float:right;
-}
+.right {float: right;}
 
 .full_size {
   width: 100%;

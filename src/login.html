@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function login() {
+      var id = document.getElementById("userid").value
+      var pwd = document.getElementById("pwd").value
+
+      if(id.length <= 0) {
+        alert("아이디를 입력해주세요.")
+        return;
+      }
+      else if(pwd.length <=0) {
+        alert("패스워드를 입력해주세요.")
+        return;
+      }
+
+      location.href = "./loginComplete.html?id=" + id + "&pwd" + pwd
+    }
+
+    var id = localStorage.getItem("_userid")
+    if(id != undefined && id.length > 0){
+      location.href = "../index.html"
+    }
+
+    function join() {
+      location = "./join.html"
+    }
+   </script>
+</head>
+
+<body>
+  <h2>로그인</h2>
+
+  <section>
+    <p>아이디 : <input id="userid" type="text" value="tester1"/></p>
+    <p>패스워드 : <input id="pwd" type="password" value="1234"/></p>
+    <button onclick="login()">로그인</button>
+    <button onclick="join()">회원가입</button>
+  </section>
+</body>
+
+<footer>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
+  <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
+</footer>
+
+</html>

@@ -3,81 +3,83 @@
 
 <head>
   <script>
-    function moveToMain(){
-      location.href = "./main.html"
+    function moveToMain() {
+      location.href = "../index.html"
     }
     function order() {
-      if (confirm("클릭시 결제완료 페이지로 이동합니다.(결제 과정은 생략)")) {
+      if (confirm("클릭시 구매완료 페이지로 이동합니다.(결제 과정은 생략)")) {
         location.href="./orderConfirm.html";
       }
     }
-
   </script>
 </head>
 
 <body>
-  <section>
+  <nav>
     <button onclick="moveToMain()">홈으로가기</button>
     <h2>장바구니</h2>
-  </section>
+  </nav>
 
   <section>
 
     <table border=1 style="border-collapse:collapse;">
     <colgroup>
-        <col width="3%">
-        <col width="10%">
-        <col width="*">
-        <col width="10%">
-        <col width="10%">
-        <col width="10%">
-      </colgroup>
-      <thead>
-        <tr>
-          <th></th>
-          <th colspan=2>상품정보</th>
-          <th>수량</th>
-          <th>판매가</th>
-          <th>주문금액</th>
+      <col width="3%">
+      <col width="10%">
+      <col width="*">
+      <col width="10%">
+      <col width="10%">
+      <col width="10%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th></th>
+        <th colspan=2>상품정보</th>
+        <th>수량</th>
+        <th>판매가</th>
+        <th>주문금액</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" name="prd" checked readonly /></td>
+        <td><img src="../res/img/P001.jpg" width=150></img></td>
+        <td><span>쟌슨빌 소시지 396g</h1></td>
+          <td>1</td>
+          <td>8,900원</td>
+          <td>8,900원</td>
         </tr>
-      </thead>
-      <tbody>
         <tr>
           <td><input type="checkbox" name="prd" checked readonly /></td>
-          <td><img src="../res/img/P001.jpg" width=150></img></td>
-          <td><span>쟌슨빌 소시지 396g</h1></td>
-            <td>1</td>
-            <td>8,900원</td>
-            <td>8,900원</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox" name="prd" checked readonly /></td>
-            <td><img src="../res/img/P002.jpg" width=150></img></td>
-            <td><span>추억의 달고나 20g</h1></td>
-              <td>10</td>
-              <td>1,500원</td>
-              <td>15,000원</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan=3></td>
-              <td colspan=3 style='background-color:lightsteelblue;padding:5px;'>
-                총 상품금액 <span style="float:right"><b>23,900</b>원</span><br/>
-                배송비 <span style="float:right"><b>2,500</b>원</span><br/><br/>
-                <b>결제금액</b> <span style="float:right"><b>26,400</b>원</span>
-
-              </td>
-      </tr>
+          <td><img src="../res/img/P002.jpg" width=150></img></td>
+          <td><span>추억의 달고나 20g</h1></td>
+            <td>10</td>
+            <td>1,500원</td>
+            <td>15,000원</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan=3></td>
+          <td colspan=3 style="background-color:lightsteelblue;padding:5px;">
+            총 상품금액 <span style="float:right"><b>23,900</b>원</span><br/>
+            배송비 <span style="float:right"><b>2,500</b>원</span><br/><br/>
+            <b>결제금액</b> <span style="float:right"><b>26,400</b>원</span>
+          </td>
+        </tr>
       </tfoot>
     </table>
+
     <br/>
+
     <button onclick="order()">결제하기</button>
-    </section>
+  </section>
 </body>
 
 <footer>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
   <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
 </footer>
 
 </html>

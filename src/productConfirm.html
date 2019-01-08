@@ -4,10 +4,10 @@
 <head>
   <script type="text/javascript">
     function moveToMain(){
-      location.href = "./main.html"
+      location.href = "../index.html"
     }
 
-    //[구매 완료 페이지 설정]
+    // [AceCounter-Plus 구매완료 설정(단일상품)]
     var _AceTM=(_AceTM||{})
     _AceTM.Buy={
       bOrderNo:'A000001', //주문번호(필수)
@@ -16,7 +16,6 @@
       bItem:[], // 주문리스트(필수)
       bDeliveryPrice:'2000' //배송비
     }
-
     _AceTM.Buy.bItem.push({
       pCode:'P001',  //제품아이디
       pName:'쟌슨빌 소세지 396g',    //제품이름
@@ -25,21 +24,35 @@
       oCode:'',    //옵션아이디
       oName:''     //옵션이름
     });
+
   </script>
 </head>
 
 <body>
-  <h1>쟌슨빌 소세지 396g 구매가 완료되었습니다.</h1>
+  <button onclick="moveToMain()">홈으로가기</button>
+  <h2>구매완료(단일상품)</h2>
+
   <section>
-    <p>주문번호 : O20190104161955</p>
-    <p>가격 : 44,500 원</p>
-    <p>결제방법 : 무통장입금</p>
-    <button onclick="moveToMain()">홈으로가기</button>
+    <p><b>* 주문번호</b> | O20190104161955</p>
+    <p><b>* 결제방법</b> | 무통장입금</p>
+
+    <h4>* 상품정보</h4>
+    <p>주문상품 | 쟌슨빌 소세지 396g</p>
+    <p>판매가 | 8,900 원</p>
+    <p>개수 | 5 개</p>
+
+    <h4>* 금액정보</h4>
+    <p>총 상품금액 | 44,500 원</p>
+    <p>배송비 | 2000 원</p>
+    <p>===================</p>
+    <p>결제금액 | 46,500 원</p>
   </section>
 </body>
 
 <footer>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
   <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
 </footer>
 
 </html>

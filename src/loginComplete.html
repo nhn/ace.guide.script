@@ -3,27 +3,29 @@
 
 <head>
   <script>
-    function moveToMain(){
-      location = "./main.html"
+    function moveToMain() {
+      location = "../index.html"
     }
 
-    function getUserId(query){
+    function getUserId(query) {
       if(query.length > 0){
         query = query.replace("?","");
         var queryArray = query.split("&")
 
         for(var idx in queryArray){
           if(queryArray[idx].indexOf("id") > -1){
-            return queryArray[idx].substring(queryArray[idx].indexOf("=")+1, queryArray[idx].length)                     
+            return queryArray[idx].substring(queryArray[idx].indexOf("=")+1, queryArray[idx].length)
           }
         }
       }
     }
-    
+
     var query = location.search
     var userId = getUserId(query)
 
     if(userId.length > 0) {
+
+      // [Acecounter-Plus 로그인 설정]
       var _AceTM=(_AceTM||{})
       _AceTM.Login={
         uID:userId, // 로그인사용자 고유값
@@ -40,14 +42,17 @@
 </head>
 
 <body>
+  <h2>로그인 완료</h2>
+
   <section>
-    <h2>로그인 완료</h2>
     <button onclick="moveToMain()">홈으로 가기</button>
   </section>
 </body>
 
 <footer>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
   <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
 </footer>
 
 </html>

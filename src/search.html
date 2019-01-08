@@ -4,7 +4,7 @@
 <head>
   <script type="text/javascript">
     function moveToMain(){
-      location.href = "./main.html"
+      location.href = "../index.html"
     }
 
     function moveToProduct(){
@@ -29,9 +29,11 @@
     var keyword = getKeyword(query)
 
     if(keyword.length > 0){
+
+      // [AceCounter-Plus 내부검색어 설정]
       var _AceTM=(_AceTM||{})
       _AceTM.pSearch=keyword //사이트내부검색어
-      console.log("keyword : " + keyword)
+
     }
 
  </script>
@@ -52,7 +54,9 @@
 </body>
 
 <footer>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
   <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
 </footer>
 
 </html>

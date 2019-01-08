@@ -3,40 +3,48 @@
 
 <head>
   <script type="text/javascript">
-    function moveToMain(){
-      location.href = "./main.html"
+    function moveToMain() {
+      location.href = "../index.html"
     }
 
-    function buyNow(){
+    function buyNow() {
+      //[Acecounter-Plus 바로구매 설정]
       _AceTM.BuyNow(5)
+
       location.href = "./productConfirm.html"
     }
 
-    function AddCart(){
+    function AddCart() {
+      //[Acecounter-Plus 카트담기 설정]
       _AceTM.AddCart(5)
+
       location.href = "./cart.html"
     }
 
-    function WishList(){
+    function WishList() {
+      //[Acecounter-Plus 찜하기 설정]
       _AceTM.WishList(5)
+
       alert("해당 상품을 찜하였습니다.")
     }
 
-    function sns(){
+    function sns() {
+      //[Acecounter-Plus SNS공유 설정]
       _AceTM.SNS('페이스북')
     }
 
-    function review(){
+    function review() {
       var title = document.getElementById('title').value
       var rating = document.getElementById('rating').value
       if(title=='') {
         alert('후기 제목을 입력하세요.');
         return;
       }
+      //[Acecounter-Plus 상품후기 설정]
       _AceTM.ReView('P001', title, rating)
     }
 
-    //[제품상세 페이지 설정]
+    //[Acecounter-Plus 제품상세 설정]
     var _AceTM=(_AceTM||{})
     _AceTM.Product={
       pCode:'P001',  //제품아이디(필수)
@@ -114,7 +122,9 @@
 </body>
 
 <footer>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
   <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
 </footer>
 
 </html>

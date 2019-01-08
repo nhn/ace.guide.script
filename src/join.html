@@ -3,7 +3,7 @@
 
 <head>
   <script>
-    function moveToIndex(){
+    function moveToMain(){
       location.href = "../index.html"
     }
 
@@ -32,8 +32,9 @@
 </head>
 
 <body>
+  <h2>회원가입</h2>
+
   <section>
-    <h2>회원가입</h2>
     <p>아이디 : <input id="userid" type="text" value="tester1" /></p>
     <p>패스워드 : <input id="pwd" type="password" value="1234" /></p>
     <p>패스워드 확인 : <input id="pwdChk" type="password" value="1234" /></p>
@@ -43,14 +44,15 @@
       <input type="radio" name="gender" id="woman" value="woman"> <label for="woman">여성</label>
     </p>
 
-    <button onclick="moveToIndex()">이전</button>
+    <button onclick="moveToMain()">이전</button>
     <button type="submit" onclick="joinConfirm()">완료</button>
   </section>
-
 </body>
 
 <footer>
-<script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
+  <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
 </footer>
 
 </html>

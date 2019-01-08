@@ -1,48 +1,93 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <script>
-    function login(){
-      var id = document.getElementById("userid").value
-      var pwd = document.getElementById("pwd").value
+  <link rel="stylesheet" href="./css/common.css">
+  <script type="text/javascript">
+    function goLogin() {
+      location.href = "./src/login.html"
+    }
+    function goCart() {
+      location.href = "./src/cart.html"
+    }
 
-      if(id.length <= 0){
-        alert("아이디를 입력해주세요.")
-        return;
+    function logout() {
+      localStorage.setItem("_userid", "")
+      location.reload()
+    }
+
+    function search() {
+      var keyword = document.getElementById("keyword").value
+
+      if(keyword != undefined && keyword.length > 0){
+        location.href = "./src/search.html?search=" + keyword
+      } else {
+        alert("검색어를 입력해주세요.")
       }
-      else if(pwd.length <=0){
-        alert("패스워드를 입력해주세요.")
-        return;
-      }
-
-      location.href = "./src/loginComplete.html?id=" + id + "&pwd" + pwd
     }
 
-    var id = localStorage.getItem("_userid")
-    if(id != undefined && id.length > 0){
-      location.href = "./src/main.html"
+    function bannerClick() {
+      // [AceCounter-Plus 배너클릭 설정]
+      _AceTM.oBannerClick("1", "1");
     }
 
-    function join(){
-      location = "./src/join.html"
+    function goWithDraw() {
+      location.href = "./src/withdraw.html"
     }
-   </script>
+  </script>
 </head>
 
 <body>
-  <h1>AceCounter+ Sample Page 입니다.</h1>
+  <h1>AceCounter+ Sample Page</h1>
+  <h2>Home</h2>
+
+  <nav>
+      <span id="welcome_message" ></span>
+      <span id="statusLogout" class="right">
+        <button onclick="goLogin()">로그인</button>
+      </span>
+      <span id="statusLogin" class="right">
+        <button onclick="goCart()">장바구니</button>
+        <button onclick="logout()">로그아웃</button>
+        <button onclick="goWithDraw()">회원탈퇴</button>
+      </span>
+  </nav>
+
   <section>
-    <h2>로그인이 필요한 서비스입니다.</h2>
-    <p>아이디 : <input id="userid" type="text" value="tester1"/></p>
-    <p>패스워드 : <input id="pwd" type="password" value="1234"/></p>
-    <button onclick="login()">로그인</button>
-    <button onclick="join()">회원가입</button>
+      <p class="right">
+        <input type="text" id="keyword" value="소시지" /><button onclick="search()">상품검색</button>
+      </p>
   </section>
+
+  <aside>
+    <a href="https://github.com/nhnent/ace.guide.script/wiki" onmousedown="bannerClick();" target="_blank">
+      <img src="./res/img/banner.png" class="full_size"/>
+    </a>
+  </aside>
 </body>
 
 <footer>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
   <script type="text/javascript" src="./common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
+
+  <script type="text/javascript">
+    var id = localStorage.getItem("_userid")
+    var wellcomeMsg = document.getElementById("welcome_message")
+    var statusLogin = document.getElementById("statusLogin")
+    var statusLogout = document.getElementById("statusLogout")
+
+    if(id != undefined && id.length > 0){
+      wellcomeMsg.innerText = id + "님 환영합니다."
+      statusLogin.style.display = "block";
+      statusLogout.style.display = "none";
+    } else {
+      localStorage.setItem("_userid", "")
+      wellcomeMsg.innerText = "로그인하세요"
+      statusLogin.style.display = "none";
+      statusLogouty.style.display = "blocks";
+    }
+
+  </script>
 </footer>
 
 </html>

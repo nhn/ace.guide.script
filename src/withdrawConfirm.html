@@ -6,6 +6,15 @@
     function moveToIndex(){
       location.href = "../index.html"
     }
+
+    var userId = localStorage.getItem("_userid")
+    if(userId.length > 0) {
+
+      // [AceCounter-Plus 회원탈퇴 설정]
+      var _AceTM=(_AceTM||{});
+      _AceTM.uWithdraw = userId // 회원탈퇴 고유값
+    }
+
   </script>
 </head>
 
@@ -13,21 +22,24 @@
   <section>
     <h2>회원탈퇴 완료</h2>
     <p>
-      <span id='userid'></span>님 탈퇴되었습니다.<br/>그동안 이용해주셔서 감사합니다.<br/><br/>
+      <span id="userid"></span>님 탈퇴되었습니다.<br/>그동안 이용해주셔서 감사합니다.<br/><br/>
       <button onclick="moveToIndex()">홈으로가기</button>
   </section>
 
 </body>
 
 <footer>
-<script type="text/javascript" src="../common/acpScript.js"></script>
-<script type="text/javascript">
-  var id = localStorage.getItem("_userid")
-  if(id != undefined && id.length > 0){
-    document.querySelector("span").innerText=id
-    localStorage.removeItem("_userid");
-  }
-</script>
+  <!-- Acecounter-Plus 공통 스크립트 시작 -->
+  <script type="text/javascript" src="../common/acpScript.js"></script>
+  <!-- Acecounter-Plus 공통 스크립트 끝 -->
+
+  <script type="text/javascript">
+    var id = localStorage.getItem("_userid")
+    if(id != undefined && id.length > 0) {
+      document.querySelector("span").innerText=id
+      localStorage.removeItem("_userid");
+    }
+  </script>
 </footer>
 
 </html>
